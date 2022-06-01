@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+    </targets>
+
+
+    <!-- we want to configure listView of  Mapper in   app page(LWC PAge)  -->
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage" >
+            <property name="listView" label="Set ListView" datasource="visible, hidden" type="String" ></property>
+
+
+        </targetConfig>
+
+    </targetConfigs>
+</LightningComponentBundle>

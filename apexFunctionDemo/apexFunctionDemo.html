@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Apex Function Demo" icon-name="standard:contact">
+       <hr/>
+         <div>
+          <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped" style="overflow-x: scroll;">
+              <thead>
+                  <tr>
+                      <th>Index</th>
+                      <th>Name</th>
+                      <th>Title</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                  </tr>
+              </thead>
+  
+              <tbody>
+                  <template for:each={contacts}  for:item='contact' for:index="index">
+                      <!-- 
+                    <tr>
+                          <th>{index}</th>
+                         <th>{contact.Name}</th> 
+                         <th>{contact.Title}</th> 
+                          <th>{contact.Email}</th>  
+                          <th> {contact.Phone}</th>
+                
+                      </tr> 
+                    -->
+
+                    <tr key={contact.Id}> 
+                        <th>{index}</th>
+                       <th>{contact.cname}</th> 
+                       <th>{contact.ctitle}</th> 
+                        <th>{contact.cemail}</th>  
+                        <th> {contact.cphone}</th>
+              
+                    </tr> 
+
+       
+                  </template>
+</tbody>
+
+</table>
+
+</div>
+</lightning-card>
+
+</template>

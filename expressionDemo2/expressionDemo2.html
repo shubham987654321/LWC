@@ -1,0 +1,26 @@
+<template>
+    <div>
+        <lightning-card>
+            <div>
+                <h1>
+
+                    FirstName : {firstName} LastName : {lastName}
+                </h1>
+            </div>
+            <br>
+            <div>
+                Full1 Name : {fullName}
+            </div>
+
+            <!-- Get the data from user -->
+            <hr/>
+            <div>
+                <lightning-input type="text" name="firstName" onchange={handleChange} value={firstName} label="Enter first Name" placeholder="Enter First Name"></lightning-input>
+                <lightning-input type="text" name="lastName" onchange={handleChange} value={lastName} label="Enter Last Name" placeholder="Enter Last Name"></lightning-input>
+                <lightning-button id="button" variant="base" label="Submit" title="Looks like a link" onclick={handleClick} class="slds-m-left_x-small">Submit</lightning-button>
+
+            </div>
+        </lightning-card>
+    </div>
+
+    </template>

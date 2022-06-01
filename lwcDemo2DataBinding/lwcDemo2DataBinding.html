@@ -1,0 +1,35 @@
+<template>
+    
+     
+   <lightning-card  variant="Narrow"  title="Demo2 Data Binding" icon-name="standard:account">
+    <p>
+        Hello , {greeting}
+    </p>
+    <lightning-input type="text"
+    label="Enter Greeting value"
+    value={greeting}
+    onchange={handleGreetingChange}/>
+</lightning-input>
+
+
+<br/><br/><br/><br/><br/>
+<lightning-input type="text"
+name="firstname"
+label="First Name"
+
+onchange={handleNameChange}>
+</lightning-input>
+
+
+<lightning-input type="text"
+name="lastname" 
+label="Last Name"
+
+onchange={handleNameChange}>
+</lightning-input>
+<br/><br/><br/><br/>
+Full Name is : {fullName.fname} {fullName.lname}
+</lightning-card>
+
+
+</template>

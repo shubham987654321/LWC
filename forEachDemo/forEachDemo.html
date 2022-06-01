@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="for Each Demo"  icon-name="custom:custom4">
+
+        <!-- <template for:each={products} for:item="product" for:index="pindex">
+            <p key={Id}>
+               <i>{pindex}</i> {product}
+            </p>  
+        </template> -->
+
+
+
+<template for:each={products} for:item="product" for:index="pindex">
+            <p key={product.pno}>
+                <b>{pindex}</b> 
+                <span> {product.pname}</span> ::
+                <span>{product.pprice}</span>
+            </p>
+        </template>
+
+
+
+
+</lightning-card>
+
+</template>

@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Calculator Demo" icon-name="action:dial_in">
+        <div class="slds-m-left_medium">
+            <p>
+                First Number : {firstNo}
+                <br/>
+                <lightning-input label ="Enter first Number" name="fno" onchange={handleChange}></lightning-input>
+               
+            </p> 
+            <p>
+                Second Number : {secondNo}
+                <br/>
+                <lightning-input label ="Enter first Number" name="sno" onchange={handleChange}></lightning-input>
+            </p>
+
+            <p>Result : {result}</p>
+
+            <p>
+                <lightning-button label="ADD" onclick={add} variant="brand"></lightning-button>
+                <lightning-button label="SUBTRACT" onclick={subtract} variant="success"></lightning-button>
+            </p>
+
+        </div>
+
+
+
+    </lightning-card>
+    
+</template>
+
+
+<!--  
+    //Namespace : lighting
+    class Card{
+        title;
+        iconName   // camel case
+        while reffering these property in .html, convert into kebab case.
+    }
+-->

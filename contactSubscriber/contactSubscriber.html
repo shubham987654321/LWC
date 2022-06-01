@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Contact Subscriber : Contact details" icon-name="standard:contact">
+        <lightning-button label="Edit" icon-name="action:edit" slot="actions" onclick={handleEdit}></lightning-button>
+        <lightning-button label="Delete" icon-name="action:delete" slot="actions" onclick={handleDeleteClick}></lightning-button>
+           
+        <div class="slds-m-left_medium" if:true={contact.data}>
+           
+          <p>
+              
+              Name : {name}
+          </p>
+          <p>
+            Title : {title}
+        </p>
+          <p>
+              Email : <lightning-formatted-email value={email}></lightning-formatted-email>
+          </p>
+          <p>
+              Phone : <lightning-formatted-phone value={phone}></lightning-formatted-phone> 
+          </p>
+          <p>
+              <c-contact-location-map record-id={selectedContactId}></c-contact-location-map>
+          </p>
+
+         
+          
+        </div>
+         <div if:false={contact.data}>
+             <b> Data is not getting</b>
+         </div>
+
+    </lightning-card>
+    
+</template>

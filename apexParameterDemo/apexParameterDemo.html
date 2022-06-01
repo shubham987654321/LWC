@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="Apex Parameter Demo" icon-name="standard:contact">
+       <lightning-input label="Enter the Country Name" onchange={handelChange} placeholder="Enter the country Name"></lightning-input>
+
+       <br/>
+       <br/><hr/>
+        <div class="slds-m-left_medium">
+         <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+             <thead>
+                 <tr>
+                     <th>Name</th>
+                     <th>Title</th>
+                     <th>Email</th>
+                     <th>Phone</th>
+                     <th>Country</th>
+                     <th>City</th>
+                 </tr>
+             </thead>
+ 
+             <tbody>
+                 <template for:each={contacts.data}  for:item='contact'>
+                     <tr key={contact.Id}>
+                        <th>{contact.Name}</th> 
+                        <th>{contact.Title}</th> 
+                         <th>{contact.Email}</th>  
+                         <th> {contact.Phone}</th>
+                         <th>{contact.MailingCountry}</th>
+                         <th>{contact.MailingCity}</th>
+      
+                     </tr>
+      
+                 </template>
+</tbody>
+
+</table>
+
+</div>
+</lightning-card>
+
+</template>

@@ -1,0 +1,21 @@
+<template>
+    <div>
+    <lightning-card title="Parent Child Communication" icon-name="custom:custom10">
+
+        <div class="slds-m-left_medium"> 
+            <p>
+                This if from Parent Component
+            </p>
+            <p>
+                <lightning-button label="Call Child mthod" onclick={handleClick}></lightning-button>
+            </p>
+            <hr/>
+            <!-- name of child component in Kebab Case and Property as well -->
+            <!-- <c-child-component child-property="201212" onchildevent={handleChildEvent}></c-child-component> -->
+            <c-child-component child-property="201212" ></c-child-component>
+        </div>
+        
+    </lightning-card>
+</div>
+    
+</template>
